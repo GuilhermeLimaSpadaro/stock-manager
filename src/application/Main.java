@@ -13,9 +13,9 @@ public class Main {
 				Scanner input = new Scanner(System.in);
 				StockManager sm = new StockManager();
 				int x = 0;
-
+				System.out.println("Sejam bem vindos!");
 				while (x != 7) {
-					System.out.println("Sejam bem vindos!");
+
 					System.out.println("\nMenu");
 					System.out.println("1 - Cadastro de produtos.");
 					System.out.println("2 - Remover produtos.");
@@ -23,13 +23,13 @@ public class Main {
 					System.out.println("4 - Preco total estoque.");
 					System.out.println("5 - Quantidade estoque.");
 					System.out.println("6 - Atualizar Item.");
-					System.out.println("7 - Sair.");
+					System.out.println("0 - Sair.");
 					System.out.println("Escolha uma das opções: ");
 					try {
 						x = input.nextInt();
 						input.nextLine();
 						if (x < 1 || x > 7) {
-							throw new DomainException("Opcao invalida. Escolha entre 1 e 7.");
+							throw new DomainException("Opcao invalida. Escolha de 1 a 6 (0 Sair).");
 						}
 						switch (x) {
 						case 1:
@@ -84,7 +84,7 @@ public class Main {
 							sm.updateItem(pd, id);
 							System.out.println();
 							break;
-						case 7:
+						case 0:
 							System.out.println("Fechando...");
 							break;
 						}
