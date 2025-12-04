@@ -35,15 +35,15 @@ public class Main {
 						case 1:
 							System.out.println();
 							System.out.print("ID: ");
-							int id = Integer.parseInt(input.nextLine());
+							int id = input.nextInt();
 							input.nextLine();
 							System.out.print("Nome: ");
 							String name = input.nextLine();
 							System.out.print("Preco: ");
-							double price = Double.parseDouble(input.nextLine());
+							double price = input.nextDouble();
 							input.nextLine();
 							System.out.print("Quantidade: ");
-							int quantity = Integer.parseInt(input.nextLine());
+							int quantity = input.nextInt();
 							input.nextLine();
 							Product pd = new Product(id, name, price, quantity);
 							sm.addProduct(pd);
@@ -70,15 +70,15 @@ public class Main {
 						case 6:
 							System.out.println("Por favor insira os dados que deseja atualizar.");
 							System.out.print("ID: ");
-							id = Integer.parseInt(input.nextLine());
+							id = input.nextInt();
 							input.nextLine();
 							System.out.print("Nome: ");
 							name = input.nextLine();
 							System.out.print("Preco: ");
-							price = Double.parseDouble(input.nextLine());
+							price = input.nextDouble();
 							input.nextLine();
 							System.out.print("Quantidade: ");
-							quantity = Integer.parseInt(input.nextLine());
+							quantity = input.nextInt();
 							input.nextLine();
 							pd = new Product(id, name, price, quantity);
 							sm.updateItem(pd, id);
